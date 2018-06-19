@@ -14,7 +14,7 @@ cool new service called "[surge.sh][surgesh]." Surge provides a simple program
 command in the terminal.
 
 At the end of the deployment process, Surge will provide you a URL that can be
-used to see your site "on the internet." The address will be a random-name in
+used to see your site "on the internet." The address is a random name in
 front of `.surge.sh`.  You can share this URL with family, friends, poodles, or
 your rally unicycling team.
 
@@ -26,13 +26,12 @@ your rally unicycling team.
 
 ## State How To Find a List Of Surge Commands
 
-> **TYPOGRAPHIC NOTE**: We'll call the program you run in the terminal, the
-> "client," `surge`. The company will be written "Surge."
+Surge provides a piece of software called `surge`.  _**It is already installed
+on the Flatiron in-browser IDE**_.  You can try it out by typing `surge` in the
+terminal.
 
-Surge is a service whose home page can be found [here][surgesh]. They provide a
-piece of software called `surge`. While their site describes an installation
-process, _**it is already installed on the Flatiron in-browser IDE**_. You can
-see that the client is running by typing `surge` in the terminal.
+> **TYPOGRAPHIC NOTE**: We'll call the program you run in the terminal, the
+> "client," `surge`. "Surge" the company or product appears as "Surge."
 
 <img alt="Surge client in the terminal" src="https://curriculum-content.s3.amazonaws.com/web-development/deploy-via-surge/surge_bare_command.png">
 
@@ -49,9 +48,9 @@ _A portion of the `surge --help` output_
 
 The most important line is the **Usage:** line.
 
-This line means: type in `surge`, a directory you wish to deploy on your
-system, and the "Surge domain" that you'd like to use.  It just so happens that
-typing `surge`, as we did above, is interpreted as:
+This line means: type in `surge`, a "project" (directory) you wish to deploy on
+your system, and the "Surge domain" that you'd like to use.  It just so happens
+that typing `surge`, as we did above, means:
 
 `surge this-directory get-me-a-new-domain-name`
 
@@ -66,9 +65,8 @@ Also very important are the commands at the very end:
   When in doubt, run surge from within you project directory.
 ```
 
-Here the `surge` client tries to help us get a better understanding of how to
-deploy a site. We'd recommend you check out these guides after you finish this
-lesson.
+Here the `surge` client tries to teach us how to use it. We'd recommend you
+check out these guides after you finish this lesson.
 
 ## State The Syntax For Deploying With Surge
 
@@ -116,16 +114,15 @@ But we now want to deploy our updates to Surge. That's easy enough, just run
 
 ![Surge Redeployment](https://curriculum-content.s3.amazonaws.com/web-development/deploy-via-surge/bare_surge_new_dest.png)
 
-That's not what I want. I _might_ occasionally wish to deploy my site to a new
-random name, but I personally liked `witty-range`. I'm going to `Control + C`
-out and apply the **Usage** instruction I got a short time ago and type: `surge
-. witty-range.surge.sh`.
+That's not what I want. By default, `surge` wants to create a new domain. This
+time, though, I want to keep using `witty-range.surge.sh`.  Let's`Control + C`
+out and type: `surge . witty-range.surge.sh`.
 
 > **RECALL**: `.` in Unix means, "this current directory."
 
-I told the `surge` client to do its thing using the current directory as the
-`project` and the `domain` of `witty-range.surge.sh`. That, in effect, is a
-"redeploy." Let's try it out:
+I told `surge` to deploy the current directory (as the `project`) to the
+`domain` of `witty-range.surge.sh`. That, in effect, is a "redeploy." Let's try
+it out:
 
 ![Surge Redeployment Corrected](https://curriculum-content.s3.amazonaws.com/web-development/deploy-via-surge/bare_surge_new_dest.png)
 
