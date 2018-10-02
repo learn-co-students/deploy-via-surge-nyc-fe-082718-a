@@ -89,12 +89,14 @@ want to share it with the world. To do so with Surge, do the following
 1. End `httpserver` with `Control + c`, if required
 2. Change into the `test-surge` directory: `cd test-surge`
 3. Type `surge`
-4. Since we're in the `test-surge` directory, Surge asks if that's what we want
+4. At this point you will be prompted to create an account. Make sure you go to your email inbox to verify it.
+5. Log into account with newly created email and password. When you type your password into the terminal the cursor won't move!
+6. Since we're in the `test-surge` directory, Surge asks if that's what we want
    to deploy. It is. So we hit `Enter`
-5. Surge creates a site name, in this case, called `witty-range.surge.sh`. This
+7. Surge creates a site name, in this case, called `witty-range.surge.sh`. This
    seems good enough. So hit `Enter`
-6. `surge` client uploads the site to Surge
-7. Open up `witty-range.surge.sh` in a browser tab
+8. `surge` client uploads the site to Surge
+9. Open up `witty-range.surge.sh` in a browser tab
 
 Our site is now live on the real-deal internet. We could text this to a friend
 and have them see our (very-)purple creation.
