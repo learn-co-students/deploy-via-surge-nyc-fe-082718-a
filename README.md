@@ -120,7 +120,8 @@ That's not what I want. By default, `surge` wants to create a new domain. This
 time, though, I want to keep using `witty-range.surge.sh`.  Let's`Control + C`
 out and type: `surge . witty-range.surge.sh`.
 
-> **RECALL**: `.` in Unix means, "this current directory."
+> **SIDE-NOTE**: The `surge` command expects its first argument to be a directory
+name. `.` in Unix means, "this current directory."
 
 I told `surge` to deploy the current directory (as the `project`) to the
 `domain` of `witty-range.surge.sh`. That, in effect, is a "redeploy." Let's try
