@@ -4,7 +4,7 @@
 
 Deploying your web site "to the internet" can be really challenging. You might
 need to buy a plan, configure a software program, learn more Unix commands,
-learn to compress your web site...etc. It's an extra bit of work that, while
+learn to compress your web site, etc... It's an extra bit of work that, while
 important, is not really the heart of learning to write HTML.
 
 In order to keep your eyes on skills of writing HTML and CSS and _not_ on the
@@ -15,19 +15,19 @@ command in the terminal.
 
 At the end of the deployment process, Surge will provide you a URL that can be
 used to see your site "on the internet." The address is a random name in
-front of `.surge.sh`.  You can share this URL with family, friends, poodles, or
+front of `.surge.sh`. You can share this URL with family, friends, poodles, or
 your rally unicycling team.
 
 ## Objectives
 
-1. State how to find a list of Surge commands
-2. State the syntax for deploying with Surge
-3. State the syntax for re-deploying a deployed site with Surge
+1.  State how to find a list of Surge commands
+2.  State the syntax for deploying with Surge
+3.  State the syntax for re-deploying a deployed site with Surge
 
 ## State How To Find a List Of Surge Commands
 
-Surge provides a piece of software called `surge`.  _**It is already installed
-on the Flatiron in-browser IDE**_.  You can try it out by typing `surge` in the
+Surge provides a piece of software called `surge`. _**It is already installed
+on the Flatiron in-browser IDE**_. You can try it out by typing `surge` in the
 terminal.
 
 > **TYPOGRAPHIC NOTE**: We'll call the program you run in the terminal, the
@@ -49,12 +49,12 @@ _A portion of the `surge --help` output_
 The most important line is the **Usage:** line.
 
 This line means: type in `surge`, a "project" (directory) you wish to deploy on
-your system, and the "Surge domain" that you'd like to use.  It just so happens
+your system, and the "Surge domain" that you'd like to use. It just so happens
 that typing `surge`, as we did above, means:
 
 `surge this-directory get-me-a-new-domain-name`
 
-Also very important are the commands at the very end:
+Also, very important are the commands at the very end:
 
 ```text
   Guides:
@@ -70,38 +70,37 @@ check out these guides after you finish this lesson.
 
 ## State The Syntax For Deploying With Surge
 
-Let's create a simple site for surge to deploy. In the in-browser IDE, I'll
-create a directory called `test-surge` that has a simple [`index.html`][isrc]
-file and a simple [`style.css`][ssrc] file. I'll then use `httpserver` to test
-out my files. You can copy and paste these files into the in-browser IDE, if
-you like.
+Let's create a simple site for surge to deploy. In this lesson, we've got a
+simple [`index.html`][isrc] file and a simple [`style.css`][ssrc] file. Let's
+use `httpserver` to test out these files.
 
-<img alt="View running httpserver process" src="https://curriculum-content.s3.amazonaws.com/web-development/deploy-via-surge/basic_site_and_httpserver.png" width=450px>
+<img alt="View running httpserver process" src="https://curriculum-content.s3.amazonaws.com/skills-front-end-web-development/surge/01_httpserver.png" width=450px>
 
-With `httpserver` running, we can visit our site:
-`http://174.138.35.103:38808/test-surge`
+With `httpserver` running, we can visit our site (in the example above its
+`http://69.205.165.109:59038`, but this will be different each time):
 
-<img alt="httpserver running our site" src="https://curriculum-content.s3.amazonaws.com/web-development/deploy-via-surge/httpserver_running_local_site.png" width=450>
+<img alt="httpserver running our site" src="https://curriculum-content.s3.amazonaws.com/skills-front-end-web-development/surge/02_httpserver_running.png" width=450>
 
 Let's suppose that we're happy with this (very-)purple site and decide that we
 want to share it with the world. To do so with Surge, do the following
 
-1. End `httpserver` with `Control + c`, if required
-2. Change into the `test-surge` directory: `cd test-surge`
-3. Type `surge`
-4. At this point you will be prompted to create an account. Make sure you go to your email inbox to verify it.
-5. Log into account with newly created email and password. When you type your password into the terminal the cursor won't move!
-6. Since we're in the `test-surge` directory, Surge asks if that's what we want
-   to deploy. It is. So we hit `Enter`
-7. Surge creates a site name, in this case, called `witty-range.surge.sh`. This
-   seems good enough. So hit `Enter`
-8. `surge` client uploads the site to Surge
-9. Open up `witty-range.surge.sh` in a browser tab
+1.  End `httpserver` with `Control + c`, if required
+2.  Type `surge`
+3.  At this point, you will be prompted to create an account. Make sure you go to
+    your email inbox to verify it.
+4.  Log into account with newly created email and password. When you type your
+    password into the terminal the cursor won't move!
+5.  Since we're in the `test-surge` directory, Surge asks if that's what we want
+    to deploy. It is. So we hit `Enter`
+6.  Surge creates a site name, in our example its `wooden-quiet.surge.sh`. This
+    seems good enough. So hit `Enter`
+7.  `surge` client uploads the site to Surge
+8.  Open up `wooden-quiet.surge.sh` in a browser tab
 
 Our site is now live on the real-deal internet. We could text this to a friend
 and have them see our (very-)purple creation.
 
-<img alt="Surge running our site" src="https://curriculum-content.s3.amazonaws.com/web-development/deploy-via-surge/surge_running_site.png" width=450>
+<img alt="Surge running our site" src="https://curriculum-content.s3.amazonaws.com/skills-front-end-web-development/surge/03_surge_running.png" width=450>
 
 ## State The Syntax For Re-deploying a Deployed Site With Surge
 
@@ -109,29 +108,29 @@ Let's suppose that we no longer want to have this mega-purple site. Let's
 change the CSS to be `#aaa`. We'll change the `background` property for `body`
 to be `#aaa` in `style.css`.
 
-<img alt="Test page running locally with a gray background" src="https://curriculum-content.s3.amazonaws.com/web-development/deploy-via-surge/httpserver_running_local_gray_site.png" width=450>
+<img alt="Test page running locally with a gray background" src="https://curriculum-content.s3.amazonaws.com/skills-front-end-web-development/surge/04_httpserver_css_change.png" width=450>
 
 But we now want to deploy our updates to Surge. That's easy enough, just run
 `surge` from within `test-surge` again! But here we run into a little snag...
 
-![Surge Redeployment](https://curriculum-content.s3.amazonaws.com/web-development/deploy-via-surge/bare_surge_new_dest.png)
+![Surge Redeployment](https://curriculum-content.s3.amazonaws.com/skills-front-end-web-development/surge/05_surge_new_name.png)
 
-That's not what I want. By default, `surge` wants to create a new domain. This
-time, though, I want to keep using `witty-range.surge.sh`.  Let's`Control + C`
-out and type: `surge . witty-range.surge.sh`.
+That's not what I want. By default, `surge` wants to create a _new_ domain. This
+time, though, I want to keep using `wooden-quiet.surge.sh`. Let's `Control + C`
+out and type: `surge . wooden-quiet.surge.sh`.
 
 > **SIDE-NOTE**: The `surge` command expects its first argument to be a directory
-name. `.` in Unix means, "this current directory."
+> name. `.` in Unix means, "this current directory."
 
 I told `surge` to deploy the current directory (as the `project`) to the
-`domain` of `witty-range.surge.sh`. That, in effect, is a "redeploy." Let's try
+`domain` of `wooden-quiet.surge.sh`. That, in effect, is a "redeploy." Let's try
 it out:
 
-![Surge Redeployment Corrected](https://curriculum-content.s3.amazonaws.com/web-development/deploy-via-surge/bare_surge_new_dest.png)
+![Surge Redeployment Corrected](https://curriculum-content.s3.amazonaws.com/skills-front-end-web-development/surge/06_surge_old_name.png)
 
 And it looks like this on Surge:
 
-<img alt="Surge running our graysite" src="https://curriculum-content.s3.amazonaws.com/web-development/deploy-via-surge/surge_running_gray_site.png" width=450>
+![Surge Updated Site](https://curriculum-content.s3.amazonaws.com/skills-front-end-web-development/surge/07_updated_surge.png)
 
 ## Completion
 
