@@ -42,7 +42,7 @@ directory onto Surge. Let's not deploy anything just yet and cancel with
 
 To find out more of the commands you can use with Surge, type `surge --help`.
 
-![Surge Help](https://curriculum-content.s3.amazonaws.com/web-development/deploy-via-surge/surge_help.png)
+![Surge Help](https://curriculum-content.s3.amazonaws.com/skills-front-end-web-development/surge/surge_help.png)
 
 _A portion of the `surge --help` output_
 
