@@ -33,7 +33,7 @@ terminal.
 > **TYPOGRAPHIC NOTE**: We'll call the program you run in the terminal, the
 > "client," `surge`. "Surge" the company or product appears as "Surge."
 
-<img alt="Surge client in the terminal" src="https://curriculum-content.s3.amazonaws.com/web-development/deploy-via-surge/surge_bare_command.png">
+![Surge Client](https://curriculum-content.s3.amazonaws.com/web-development/deploy-via-surge/surge_bare_command.png)
 
 As you can see, `surge` is _already_ trying to deploy the current directory
 we're in as a web page. Here it's asking whether it should try to deploy the
@@ -42,7 +42,7 @@ directory onto Surge. Let's not deploy anything just yet and cancel with
 
 To find out more of the commands you can use with Surge, type `surge --help`.
 
-<img alt="Surge client --help output" src="https://curriculum-content.s3.amazonaws.com/web-development/deploy-via-surge/surge_help.png">
+![Surge Help](https://curriculum-content.s3.amazonaws.com/web-development/deploy-via-surge/surge_help.png)
 
 _A portion of the `surge --help` output_
 
@@ -74,12 +74,12 @@ Let's create a simple site for surge to deploy. In this lesson, we've got a
 simple [`index.html`][isrc] file and a simple [`style.css`][ssrc] file. Let's
 use `httpserver` to test out these files.
 
-<img alt="View running httpserver process" src="https://curriculum-content.s3.amazonaws.com/skills-front-end-web-development/surge/01_httpserver.png" width=450px>
+![Run httpserver](https://curriculum-content.s3.amazonaws.com/skills-front-end-web-development/surge/01_httpserver.png)
 
 With `httpserver` running, we can visit our site (in the example above its
 `http://69.205.165.109:59038`, but this will be different each time):
 
-<img alt="httpserver running our site" src="https://curriculum-content.s3.amazonaws.com/skills-front-end-web-development/surge/02_httpserver_running.png" width=450>
+![Running Server](https://curriculum-content.s3.amazonaws.com/skills-front-end-web-development/surge/02_httpserver_running.png)
 
 Let's suppose that we're happy with this (very-)purple site and decide that we
 want to share it with the world. To do so with Surge, do the following
@@ -100,7 +100,7 @@ want to share it with the world. To do so with Surge, do the following
 Our site is now live on the real-deal internet. We could text this to a friend
 and have them see our (very-)purple creation.
 
-<img alt="Surge running our site" src="https://curriculum-content.s3.amazonaws.com/skills-front-end-web-development/surge/03_surge_running.png" width=450>
+![Surge Running](https://curriculum-content.s3.amazonaws.com/skills-front-end-web-development/surge/03_surge_running.png)
 
 ## State The Syntax For Re-deploying a Deployed Site With Surge
 
@@ -108,12 +108,12 @@ Let's suppose that we no longer want to have this mega-purple site. Let's
 change the CSS to be `#aaa`. We'll change the `background` property for `body`
 to be `#aaa` in `style.css`.
 
-<img alt="Test page running locally with a gray background" src="https://curriculum-content.s3.amazonaws.com/skills-front-end-web-development/surge/04_httpserver_css_change.png" width=450>
+![Test Page](https://curriculum-content.s3.amazonaws.com/skills-front-end-web-development/surge/04_httpserver_css_change.png)
 
 But we now want to deploy our updates to Surge. That's easy enough, just run
 `surge` from within `test-surge` again! But here we run into a little snag...
 
-![Surge Redeployment](https://curriculum-content.s3.amazonaws.com/skills-front-end-web-development/surge/05_surge_new_name.png)
+![Surge Redeployment](https://curriculum-content.s3.amazonaws.com/skills-front-end-web-development/surge/05_surge_wants_new_name.png)
 
 That's not what I want. By default, `surge` wants to create a _new_ domain. This
 time, though, I want to keep using `wooden-quiet.surge.sh`. Let's `Control + C`
