@@ -1,1 +1,1 @@
-# You will enter your deployed Surge URL here
+# You will enter your deployed Surge URL here. Replace this line with the URL
